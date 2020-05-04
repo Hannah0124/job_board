@@ -3,7 +3,9 @@
 
 <% @jobs.each do |job| %>
   <div class="job">
-    <strong><%= job.title %></strong>
+    <strong>
+      <%= link_to job.title, job_path(job) %>
+    </strong>
     <%= job.description %>
   </div>
 <% end %>
